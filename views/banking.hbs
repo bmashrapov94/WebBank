@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--Student name: Bektursun Mashrapov-->
+<!--Student ID: 140309220-->
+<!--Student email: bmashrapov@myseneca.ca-->
+<!--Course: WEB322-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/public/styleBanking.css">
+    <title>Web Bank Main Page</title>
+    
+</head>
+<body>
+    <header>
+        <img src="/public/images/webBankLogo.png" alt="Web Bank Logo">
+        <h1>Main page of your Web Bank account</h1>
+    </header>
+    <p>Welcome to Web Bank!</p>
+    <p><a href="/logout" id="logout-link">{{ username }}</a></p>
+    <section class="account-section">
+        <p>Select Account Type:</p>
+        <label for="balanceAccount">Balance</label>
+        <input type="radio" id="balanceAccount" name="accountType" value="balance" checked>
+        <label for="depositAccount">Deposit</label>
+        <input type="radio" id="depositAccount" name="accountType" value="deposit">
+    </section>
+    <form action="/logout" method="post">
+        
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" id="accountNumber" name="accountNumber" placeholder="Account Number" required>
+        <button type="button" id="ok-button">OK</button>
+    </form>
+    
+    <!-- Javascript to handle movement to the selected page for balance check -->
+    <script>
+        document.getElementById('ok-button').addEventListener('click', function () {
+            const accountNumber = document.getElementById('accountNumber').value;
+            const balanceAccountRadio = document.getElementById('balanceAccount');
+            
+            if (accountNumber === "1" && balanceAccountRadio.checked) {
+                window.location.href = "/balance";
+            }
+        });
+    </script>
+</body>
+</html>

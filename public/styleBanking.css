@@ -1,0 +1,74 @@
+/* header */
+header 
+{
+    text-align: center;
+    font-size: 24px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+}
+
+header img 
+{
+    display: block;
+    margin: 0 auto;
+}
+
+/* main content */
+p 
+{
+    text-align: center;
+    font-size: 18px;
+    margin: 20px;
+    margin-top: 10px; 
+}
+
+/* account section */
+.account-section 
+{
+    text-align: center;
+    margin: 20px;
+}
+
+.account-section p 
+{
+    margin: 5px;
+}
+
+/* logout button */
+form 
+{
+    text-align: center;
+    margin: 20px;
+}
+
+button 
+{
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover 
+{
+    background-color: #d60000;
+}
+
+a[href="/logout"]:hover:after 
+{
+    content: "Log Out";
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+p > a[href="/logout"]:hover 
+{
+    color: transparent;
+}
