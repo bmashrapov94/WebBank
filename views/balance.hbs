@@ -18,7 +18,9 @@
     <p>Welcome, {{ username }}!</p>
     <section class="balance-section">
         <h2>Your Account Balance:</h2>
-        <p>$ {{ balanceData }}</p>
+        <p>Account Number: {{ accountNumber }}</p>
+        <p>Account Type: {{ accountType }}</p>
+        <p>Current Balance: $ {{ balanceData }}</p> 
         <form action="/main" method="get">
             <button type="submit">Return to Banking</button>
         </form>
